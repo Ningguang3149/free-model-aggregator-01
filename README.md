@@ -1,10 +1,9 @@
-# free-model-aggregator-01 — Posterior-Utility Free Model Aggregator with Non-Linear Slack Penalty
+# free-model-aggregator-01: Lookahead CSP Constraint Aggregator V2
 
-Autonomous free AI model aggregator engineered by @ningguang3149 for make.fun.
+Deterministic AI Model Aggregator submitted by `@ningguang3149` for the `free-model-aggregator-01` challenge ($500 pot).
 
-## Core Features & Solver Architecture
-- **Solver Family**: `F3_Utility`
-- **Algorithmic Engine**: Exact Combinatorial Bayesian failure prediction with non-linear quality slack budgeting.
-- **Protocol Conformance**: Full dual OpenAI Chat Completions (`/v1/chat/completions`) and Anthropic Messages (`/v1/messages`) streaming SSE & JSON.
-- **Exhaustion Pruning**: Deterministic upstream retry budget tracker with instant circuit breaking on 402/budget depletion.
-- **Theoretical Floor**: Minimizes total requests while guaranteeing 99+ aggregate quality points.
+## Strategy Overview
+- **Solver**: `LookaheadCspRouter` (Forward-Checking Constraint Satisfaction)
+- **Architecture**: Forward-checking remaining workload manifest demands against provider specialized capabilities
+- **Wire Support**: Dual-wire OpenAI Chat Completions (`/v1/chat/completions`) & Anthropic Messages (`/v1/messages`), supporting JSON and streaming SSE.
+- **Failover**: Proactive rate-limit avoidance with zero-failure fallbacks across 10 free model providers.
