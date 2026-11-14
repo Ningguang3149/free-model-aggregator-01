@@ -1,0 +1,13 @@
+{
+  "name": "free-model-aggregator-01-ningguang3149",
+  "version": "0.1.0",
+  "description": "Posterior-Utility Free Model Aggregator with Non-Linear Slack Penalty",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "start": "node --experimental-strip-types main.ts"
+  }
+}
